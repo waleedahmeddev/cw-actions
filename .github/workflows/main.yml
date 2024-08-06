@@ -1,15 +1,15 @@
-name: Test workflow
+name: Main workflow
 
 on:
   push:
 
 jobs:
-  echo:
+  main-echo:
     runs-on: "ubuntu-latest"
     steps:
 
-      - name: Checkout
+      - name: Main Checkout
         uses: actions/checkout@v4
 
-      - name: Echo
+      - name: Main Echo
         run: echo ok

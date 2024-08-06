@@ -1,0 +1,15 @@
+name: Dependent workflow
+
+on:
+  push:
+
+jobs:
+  dependent-echo:
+    runs-on: "ubuntu-latest"
+    steps:
+
+      - name: Dependent Checkout
+        uses: actions/checkout@v4
+
+      - name: Dependent Echo
+        run: echo ok

@@ -1,7 +1,11 @@
 name: Main workflow
 
 on:
-  push:
+  #push:
+  workflow_run:
+    workflows: ["Dependent workflow"]
+    types: 
+      - completed
 
 jobs:
   main-echo:
